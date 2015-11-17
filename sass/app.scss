@@ -13,9 +13,8 @@ html {
   margin: auto;
   font-family: 'Raleway', sans-serif;
   background-color: #eee;
-
-
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -37,6 +36,10 @@ html {
 
 
 //IMG FORM //
+
+.form-section {
+  display: none;
+}
 
 .image-form {
   display: flex;
