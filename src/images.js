@@ -8,10 +8,19 @@ export default function() {
   var cancel = $('.cancel');
 
   var showContact = function(image) {
-    $('<div></div>')
-      .addClass('images')
-      .appendTo('.images')
-      .html(`${image.image} - ${image.text}`);
+    var imageArea = $('<div></div>')
+      .addClass('image-area')
+      .appendTo('.images');
+
+    $('<img></img>')
+    .attr('src', `${image.image}`)
+    .addClass('pic')
+    .appendTo(imageArea);
+
+    $('<p></p>')
+    .html(`${image.text}`)
+    .addClass('image-text')
+    .appendTo(imageArea);
   };
 
   $('.fa-plus-circle').on('click', toggleForm);
