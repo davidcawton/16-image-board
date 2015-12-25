@@ -3,16 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Image Board</title>
-    <link rel="stylesheet" href="/normalize-css">
     <link rel="stylesheet" href="/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <nav class="nav-bar">
+      <i class="fa fa-plus-circle"></i>
+    </nav>
+    <div class="form-section">
+    <form action="#" class="image-form">
+      <input type="text" class="image-url" placeholder="Image URL">
+      <textarea type="text" class="image-caption" placeholder="Image Caption"></textarea>
+      <div class="buttons">
+        <button class="add-image-btn"><i class="fa fa-picture-o"></i>ADD IMAGE</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </form>
+    </div>
+    <div class="images">
+      <div class="image-area">
+        <img src="http://lorempixel.com/400/400" alt="image" class="picture">
+        <p class="image-text">Image Text</p>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.js"></script>
     <script src="/jquery.js"></script>
     <script src="app.js"></script>
     <script>
       require(['images'], function(images) {
-        $(`images`);
+        images();
       });
     </script>
   </body>
