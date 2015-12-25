@@ -1,7 +1,7 @@
 export default function() {
 
   var toggleForm = function() {
-    $('.form-section'). slideToggle();
+    $('.form-section').slideToggle();
   };
 
   var submitButton = $('.add-img-btn');
